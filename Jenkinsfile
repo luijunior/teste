@@ -3,7 +3,7 @@ pipeline {
         stages {
             stage('publish to s3') {
                 steps {
-                    withAWS(credentials:'default') {
+                    withAWS(profile:'default') {
                         s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'Dockerfile', bucket:'luiz-test', path:'Dockerfile')
                     }
                 }
