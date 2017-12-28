@@ -1,0 +1,7 @@
+mulesoft:
+ image: luizgj/mulesoft:latest
+ ports:
+  - '8787:8787'
+ volumes:
+  - ./apps:/mule-standalone-3.8.0/apps
+  - ./logs:/mule-standalone-3.8.0/logs
