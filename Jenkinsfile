@@ -4,9 +4,8 @@ pipeline {
         step([
             $class: 'S3BucketPublisher',
             entries: [[
-                sourceFile: 'mybinaryFile',
-                bucket: 'GoBinaries',
-                selectedRegion: 'eu-west-1',
+                sourceFile: 'Dockerfile',
+                bucket: 'luiz-test',
                 noUploadOnFailure: true,
                 managedArtifacts: true,
                 flatten: true,
